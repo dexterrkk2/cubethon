@@ -11,6 +11,7 @@ public class playerCollision : MonoBehaviour
         if(collisionInfo.collider.tag == "Obstacle")
         {
             playerMvmnt.enabled = false;
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }

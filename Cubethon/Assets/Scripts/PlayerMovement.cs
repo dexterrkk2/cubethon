@@ -34,5 +34,9 @@ public class PlayerMovement : MonoBehaviour
         {
             moveRight = true;
         }
+        if(rb.position.y < -1f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 }
